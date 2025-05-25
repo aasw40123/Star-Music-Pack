@@ -1,6 +1,6 @@
 {
 	"name": "Star Pack",
-	"description": "The Star Breeze of Lewdity pack. v0.1",
+	"description": "The Star Breeze of Lewdity pack. v0.2",
 	"icon": "./breeze/packs/Star/icon.png",
 
 	"shorthand": {
@@ -47,7 +47,8 @@
 		],
 		"ForestDay": "./breeze/packs/Star/audio/forest-ambience-296528.mp3",
 		"MusicEventBadVibe": "./breeze/packs/Star/audio/EventBadVibe.mp3",
-		"CombatMusicGeneric": ""
+		"CombatMusicGeneric": "",
+		"Night": "./breeze/packs/Star/audio/night2.mp3"
 	},
 	"data": [
 		{
@@ -55,6 +56,25 @@
 			"do": {
 				"music": {
 					"url": "./breeze/packs/Star/audio/yume.mp3",
+					"volume": 0.6
+				}
+			}
+		},
+        
+		{
+			"if": "stalked true",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/stalked.mp3",
+					"volume": 0.6
+				}
+			}
+		},
+		{
+			"if": "calendar 31/10 and ",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/WitchesTeaParty.mp3",
 					"volume": 0.6
 				}
 			}
@@ -204,15 +224,6 @@
 				"music": {
 					"url": "./breeze/packs/Star/audio/T-Rick.mp3",
 					"volume": 0.8
-				}
-			}
-		},
-		{
-			"if": "npcPresent has 'Harper'",
-			"do": {
-				"music": {
-					"url": "./breeze/packs/Star/audio/Harper.mp3",
-					"volume": 0.6
 				}
 			}
 		},
@@ -507,7 +518,7 @@
 			"do": {
 				"music": {
 					"url": "#PotionShopMusic",
-					"volume": 0.8
+					"volume": 0.5
 				}
 			}
 		},
@@ -515,8 +526,8 @@
 			"if": "location 'forest_shop'",
 			"do": {
 				"music": {
-					"url": "#PotionShopMusic",
-					"volume": 0.7
+					"url": "./breeze/packs/Star/audio/the forest shop.mp3",
+					"volume": 0.5
 				},
 				"if": "lastPassage has 'Forest'",
 				"do": {
@@ -624,18 +635,21 @@
 		{
 			"if": "location 'pub'",
 			"do": {
-				"music": {
-					"url": "./breeze/packs/Star/audio/bar-background-001-291671.mp3",
-					"volume": 0.6
-				},
-				"if": "dayState 'dusk'",
-				"do": {
-					"music": {
-						"url": "./breeze/packs/Star/audio/boston-piano-bar-231669.mp3",
-						"volume": 0.7
+			        "music": {
+						"url": "./breeze/packs/Star/audio/P5 OST 29 Beneath the Mask.mp3",
+						"volume": 0.8
+						},
+					"ambience": {
+					"url": "./breeze/packs/Star/audio/bustle-in-the-pub-52265.mp3",
+					"volume": 0.2
 					}
-				}
+						
+					
+				
+			
+			
 			}
+			
 		},
 		{
 			"if": "location 'cafe'",
@@ -851,19 +865,50 @@
 			]
 		},
 		{
+			"if": "location 'town' and mapLocation 'connudatus' and outside",
+			"do": {
+			    "if": "dayState 'dawn' or dayState 'day'",
+			    "do": {
+			        "ambience": {
+					"url": "./breeze/packs/Star/audio/sunday-market.mp3",
+					"volume": 0.7
+					}
+					},
+
+				"else": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/night.mp3",
+						"volume": 1
+					}
+				    }
+					
+				}
+				
+				
+		},
+		{
+			"if": "passage has 'Stall'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/Sunnydayshopping.mp3",
+					"volume": 0.5
+				}
+			}
+		},
+		{
 			"if": "location 'town' and (mapLocation 'cliff' or mapLocation 'starfish') and outside",
 			"do": {
 				"if": "weather 'none' and season neq 'winter' and dayState neq 'night'",
 				"do": {
 					"ambience": {
 						"url": "./breeze/packs/Star/audio/beach-sound-with-seagulls-218923.mp3",
-						"volume": 0.15
+						"volume": 0.2
 					}
 				},
 				"else": {
 					"ambience": {
 						"url": "./breeze/packs/Star/audio/ocean-waves-112906.mp3",
-						"volume": 0.15
+						"volume": 0.2
 					}
 				}
 			}
@@ -881,12 +926,11 @@
 				"else": {
 					"ambience": {
 						"url": "./breeze/packs/Star/audio/night.mp3",
-						"volume": 0.8
+						"volume": 1
 					}
 				}
 			}
 		},
-
 		{
 			"if": "location 'cabin'",
 			"do": {
@@ -1240,6 +1284,89 @@
 					"volume": 0.4
 				}
 			}
+		},
+		{
+			"if": "location 'landfill'",
+			"do": {
+				"if": "dayState 'night'",
+				"do": {
+					"ambience": {
+					"url": "#Night2",
+					"volume": 0.6
+					}
+				},
+				"else": {
+				"do": {
+					"ambience": {
+					"url": "./breeze/packs/Star/audio/landfill.mp3",
+					"volume": 0.6
+					}	
+					}
+				}
+			}
+		},
+		{
+			"if": "location 'factory'",
+			"do": {
+				"if": "dayState 'night'",
+				"do": {
+					"ambience": {
+					"url": "#Night2",
+					"volume": 0.6
+					}
+				},
+				"else": {
+				"do": {
+					"ambience": {
+					"url": "./breeze/packs/Star/audio/factory.mp3",
+					"volume": 0.4
+					},
+					"music": {
+					"url": "./breeze/packs/Star/audio/Lazy_night.mp3",
+					"volume": 1
+					}	
+					}
+				}
+			}
+		},
+
+		{
+			"if": "passage has 'Strip Club'",
+			"do": {
+				"if": "dayState 'night'",
+				"do": {
+					"music": {
+					"url": "./breeze/packs/Star/audio/Rock The Boat.mp3",
+					"volume": 0.6
+					}	
+                }
+				}
+				
+		},
+		{
+			"if": "location 'brothel'",
+			"do": {
+
+				"if": "passage has 'Dance'",
+			    "do": {
+					"music": {
+					"url": "./breeze/packs/Star/audio/dance-for-me-280006.mp3",
+					"volume": 0.8
+					}
+					},	
+				"else": {
+				"do": {
+					"music": {
+					"url": "./breeze/packs/Star/audio/Dancing_with_ghosts.mp3",
+					"volume": 0.8
+					}	
+				
+				}
+				}
 		}
+		}
+	
+		
+		
 	]
 }
