@@ -1,0 +1,1245 @@
+{
+	"name": "Star Pack",
+	"description": "The Star Breeze of Lewdity pack. v0.1",
+	"icon": "./breeze/packs/Star/icon.png",
+
+	"shorthand": {
+		"BaileyBattle": "./breeze/packs/Star/audio/maou_bgm_fantasy15.mp3",
+		"BaileyPayUp": "./breeze/packs/Star/audio/Piss_Off.mp3",
+		"BaileyTheme": "./breeze/packs/Star/audio/BaileyTheme.mp3",
+		"Possessed": "./breeze/packs/Star/audio/been_watching_you.mp3",
+		"WraithIntro": "./breeze/packs/Star/audio/qhzO3mbdvJg.mp3",
+		"WraithFight": "./breeze/packs/Star/audio/h1hGuAa4Nmc.mp3",
+		"TownDayDefault": "./breeze/packs/Star/audio/cKkRHv4m4eo.mp3",
+		"TownDayWinter": "./breeze/packs/Star/audio/AiX1dBfmftA.mp3",
+		"CaveWind": "./breeze/packs/Star/audio/STORM_RULER.mp3",
+		"Rain": "./breeze/packs/Star/audio/car_and_rain.mp3",
+		"RainOnRoof": "./breeze/packs/Star/audio/Rain0.mp3",
+		"RainOnUmbrella": "./breeze/packs/Star/audio/rainumbrella.mp3",
+		"HighUpWind": "./breeze/packs/Star/audio/wind-18030.mp3",
+		"SplashIntoWater": "./breeze/packs/Star/audio/Minecraft Splash.mp3",
+		"Underwater": "./breeze/packs/Star/audio/underwater-306474.mp3",
+		"RushingWater": "./breeze/packs/Star/audio/moving-low-frequencies-30842.mp3",
+		"Bath": "./breeze/packs/Star/audio/shower-in-bathroom-62910.mp3",
+		"WetCave": "./breeze/packs/Star/audio/dripping-water-stereo-sound-257182.mp3",
+		"Cave": "./breeze/packs/Star/audio/dungeon-air-6983.mp3",
+		"Museum": "./breeze/packs/Star/audio/Museum.mp3",
+		"MusicShopping": "./breeze/packs/Star/audio/Sunflower.mp3",
+		"AmbienceArcade": "./breeze/packs/Star/audio/maou_bgm_8bit29.mp3",
+		"Tenyclus": "./breeze/packs/Star/audio/maou_bgm_8bit04.mp3",
+		"PotionShopMusic": "./breeze/packs/Star/audio/maou_bgm_ethnic29.mp3",
+		"OrphanageLowHopeLowReb": "./breeze/packs/Star/audio/LowHopeLowReb.mp3",
+		"OrphanageMidHopeLowReb": "./breeze/packs/Star/audio/MidHopeLowReb.mp3",
+		"OrphanageHighHopeLowReb": "./breeze/packs/Star/audio/HighHopeLowReb.mp3",
+		"OrphanageLowHopeMidReb": "./breeze/packs/Star/audio/new_day.mp3",
+		"OrphanageMidHopeMidReb": "./breeze/packs/Star/audio/Solar_Finger.mp3",
+		"OrphanageHighHopeMidReb": "./breeze/packs/Star/audio/Come_on_baby.mp3",
+		"OrphanageLowHopeHighReb": "./breeze/packs/Star/audio/digital_world.mp3",
+		"OrphanageMidHopeHighReb": "./breeze/packs/Star/audio/MidHopeHighReb.mp3",
+		"OrphanageHighHopeHighReb": "./breeze/packs/Star/audio/Sunrise.mp3",
+		"DistantGun": [
+			"./breeze/audio/default/sfx/eden/distant_gunshot1.wav",
+			"./breeze/audio/default/sfx/eden/distant_gunshot2.wav"
+		],
+		"EdenCatch": "./breeze/packs/default/sfx/eden/bullet_flyby_hit_tree.wav",
+		"CabinInterior": [
+			"wsode8b-C-0"
+		],
+		"ForestDay": "./breeze/packs/Star/audio/forest-ambience-296528.mp3",
+		"MusicEventBadVibe": "./breeze/packs/Star/audio/EventBadVibe.mp3",
+		"CombatMusicGeneric": ""
+	},
+	"data": [
+		{
+			"if": "location 'banner'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/yume.mp3",
+					"volume": 0.6
+				}
+			}
+		},
+		{
+			"if": "underwater",
+			"do": {
+				"ambience": {
+					"url": "#Underwater",
+					"volume": 1
+				}
+			}
+		},
+		{
+			"if": "lastAction has 'Dive'",
+			"do": {
+				"sfx": {
+					"url": "#SplashIntoWater",
+					"volume": 0.3
+				}
+			}
+		},
+		{
+			"if": "passage has 'Rooftops' or passage has 'rooftops'",
+			"do": {
+				"ambience": {
+					"url": "#HighUpWind",
+					"volume": 0.2
+				}
+			}
+		},
+		{
+			"if": "possessed or (passage has 'Lake' and passage has 'Prison')",
+			"do": [
+				{
+					"if": "passage has 'Lake Prison Intro Fight' or passage has 'Lake Ruin Prison Rape'",
+					"do": {
+						"music": {
+							"url": "#WraithFight",
+							"volume": 1
+						}
+					}
+				},
+				{
+					"if": "underwater or (passage has 'Lake' and passage has 'Prison Intro') or passage has 'Lake Prison Slime'",
+					"do": {
+						"music": {
+							"url": "#WraithIntro",
+							"volume": 1
+						}
+					}
+				},
+				{
+					"if": "possessed",
+					"do": {
+						"music": {
+							"url": "#Possessed"
+						}
+					}
+				}
+			]
+		},
+		{
+			"if": "isBloodMoon",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/norowaretapiano.mp3",
+					"volume": 1.4
+				}
+			}
+		},
+		{
+			"if": "passage has 'Orphanage Hacker'",
+			"do": {
+				"music": {},
+				"ambience": {
+					"url": "./breeze/packs/Star/audio/roomtone03-24954.mp3",
+					"volume": 0.4
+				},
+				"if": "passage has 'Strip'",
+				"do": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/roomtone03-24954.mp3",
+						"volume": 0.8
+					},
+					"music": {
+						"url": "./breeze/packs/Star/audio/Extra_City.mp3",
+						"volume": 0.3
+					}
+				}
+			}
+		},
+		{
+			"if": "passage has 'Pub Fame' and (passage nas 'Intro 1' and passage nas 'Intro 2' and passage nas 'Return')",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/Extra_City.mp3",
+					"volume": 0.8
+				},
+				"ambience": {
+					"url": "./breeze/packs/Star/audio/roomtone03-24954.mp3",
+					"volume": 1
+				}
+			}
+		},
+		{
+			"if": "passage has 'Docks_Robin'",
+			"do": {
+				"music": {
+					"url": "#MusicEventBadVibe",
+					"volume": 0.6
+				}
+			}
+		},
+		{
+			"if": "passage has 'Commercial rooftops'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/The_Murmuring_Forest.mp3",
+					"volume": 1.0
+				}
+			}
+		},
+		{
+			"if": "npcPresent has 'Bailey'",
+			"do": [
+				{
+					"if": "combat",
+					"do": {
+						"music": { "url": "#BaileyBattle", "volume": 0.5 }
+					}
+				},
+				{
+					"if": "text has 'Time to pay up' or (passage has 'Rent' and passage neq 'Rent Pay')",
+					"do": {
+						"music": { "url": "#BaileyPayUp", "volume": 0.6 }
+					}
+				},
+				{
+					"music": { "url": "#BaileyTheme","volume": 0.6 }
+				}
+			]
+		},
+		{
+			"if": "npcPresent has 'Landry'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/T-Rick.mp3",
+					"volume": 0.8
+				}
+			}
+		},
+		{
+			"if": "npcPresent has 'Harper'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/Harper.mp3",
+					"volume": 0.6
+				}
+			}
+		},
+		{
+			"if": "(location 'forest' or location 'moor') and (hunted or text has 'A bullet whizzes past and hits a tree in front of you.')",
+			"do": [
+				{
+					"music": {
+						"url": "./breeze/packs/Star/audio/9nLe3PAm4Ro.mp3",
+						"volume": 0.7
+					}
+				},
+				{
+					"if": "text has 'You hear a gun firing from afar.'",
+					"do": {
+						"sfx": {
+							"url": "#DistantGun",
+							"volume": "0.5~1.5"
+						}
+					}
+				},
+				{
+					"if": "text has 'A bullet whizzes past and hits a tree'",
+					"do": {
+						"sfx": {
+							"url": "#EdenCatch",
+							"volume": "0.8"
+						}
+					}
+				}
+			]
+		},
+		{
+			"if": "location 'museum'",
+			"do": {
+				"ambience": {
+					"url": "#Museum",
+					"volume": 0.5
+				}
+			}
+		},
+		{
+			"if": "location 'lake_ruin' and !underwater",
+			"do": {
+				"ambience": {
+					"url": "#WetCave",
+					"volume": 0.5
+				}
+			}
+		},
+		{
+			"if": "location 'underground'",
+			"do": {
+				"if": "(weather 'rain' or passage 'Beach Cave') or passage nas 'Smuggler Pub'",
+				"do": {
+					"ambience": {
+						"url": "#WetCave",
+						"volume": 0.5
+					}
+				},
+				"else": {
+					"ambience": {
+						"url": "#Cave",
+						"volume": 1
+					}
+				}
+			}
+		},
+		{
+			"if": "weather 'rain' and location neq 'underground' and !underwater",
+			"do": {
+				"if": "outside",
+				"do": {
+					"ambience": {
+						"url": "#Rain",
+						"volume": 0.9,
+						"start": "0~3600"
+					},
+					"if": "$worn.handheld.type has 'rainproof'",
+					"do": {
+						"ambience": {
+							"url": "#RainOnUmbrella",
+							"volume": 0.7,
+							"start": "0~3600"
+						}
+					}
+				},
+				"else": {
+					"if": "location eq 'wolf_cave'",
+					"do": {
+						"ambience": {
+							"url": "#Rain",
+							"volume": 0.3
+						}
+					},
+					"else": {
+						"ambience": {
+							"url": "#RainOnRoof",
+							"volume": 0.35
+						}
+					}
+				}
+			}
+		},
+		{
+			"if": "combat and enemyType 'vore'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/Umwelt.mp3",
+					"volume": 0.7
+				},
+				"if": "voreStage >= 5",
+				"do": {
+					"music": {
+						"url": "./breeze/packs/Star/audio/maou_game_dangeon20.mp3",
+						"volume": 0.6
+					},
+					"if": "voreStage >= 7",
+					"do": [
+						{
+							"if": "stomachStage = 0",
+							"do": {
+								"music": {
+									"url": "./breeze/packs/Star/audio/maou_game_dangeon20.mp3",
+									"volume": 0.6
+								}
+							}
+						},
+						{
+							"if": "stomachStage = 1",
+							"do": {
+								"music": {
+									"url": "./breeze/packs/Star/audio/maou_game_dangeon20.mp3",
+									"volume": 0.5
+								}
+							}
+						},
+						{
+							"if": "stomachStage = 2",
+							"do": {
+								"music": {
+									"url": "./breeze/packs/Star/audio/maou_game_dangeon20.mp3",
+									"volume": 0.4
+								}
+							}
+						},
+						{
+							"if": "stomachStage = 3",
+							"do": {
+								"music": {
+									"url": "./breeze/packs/Star/audio/maou_game_dangeon20.mp3",
+									"volume": 0.3
+								}
+							}
+						},
+						{
+							"if": "stomachStage = 4",
+							"do": {
+								"music": {
+									"url": "./breeze/packs/Star/audio/maou_game_dangeon20.mp3",
+									"volume": 0.2
+								}
+							}
+						},
+						{
+							"if": "stomachStage >= 5",
+							"do": {
+								"music": {
+									"url": "./breeze/packs/Star/audio/maou_game_dangeon20.mp3",
+									"volume": 0.1
+								}
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"if": "combat",
+			"do": {
+				"music": {"url": "#CombatMusicGeneric", "volume": 0.6}
+			}
+		},
+		
+		{
+			"if": "(passage has 'Bed' && passage nas 'Bedroom') || passage has 'Sleep' ",
+			"do": {
+				"if": "trauma < 100",
+				"do": {
+					"music": {
+						"url": "./breeze/packs/Star/audio/Sleep1.mp3",
+						"volume": 0.3
+					}
+				},
+				"else": {
+					"music": {
+						"url": "./breeze/packs/Star/audio/Sleep.mp3",
+						"volume": 0.3
+					}
+				}
+			}
+		},
+		{
+			"if": "location 'home' and (passage has 'Bedroom' or passage has 'Wardrobe' or passage has 'Mirror' or passage has 'Settings' or passage has 'Attitudes' or passage has 'PillCollection')",
+			"do": {
+				"if": "dayState 'night'",
+				"do": {
+					"music": {
+						"url": "./breeze/packs/Star/audio/home.mp3",
+						"volume": 0.5
+					}
+				},
+				"else": {
+					"music": {
+						"url": "./breeze/packs/Star/audio/home.mp3",
+						"volume": 0.35
+					}
+				}
+			}
+		},
+		{
+			"if": "passage has 'Robin' and location 'home' and !$robinmissing",
+			"do": [
+				{
+					"if": "npcData.robin.trauma > 0 or trauma > 2500",
+					"do": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/46gLv4pJKow.mp3",
+							"volume": 0.9,
+							"end": 126
+						}
+					}
+				},
+				{
+					"music": {
+						"url": "./breeze/packs/Star/audio/home.mp3",
+						"volume": 0.8
+					}
+				}
+			]
+		},
+		{
+			"if": "location 'hospital' or passage has 'Hospital'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/Hospital.mp3",
+					"volume": 0.8
+				},
+				"if": "passage has 'Hospital Bed'",
+				"do": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/steadyheart.mp3",
+						"volume": 0.6
+					}
+				}
+			}
+		},
+		{
+			"if": "location 'shopping_centre' && dayState neq 'night' && passage nas 'Commercial rooftops'",
+			"do": [
+				{
+					"if": "time.monthName 'November' or time.monthName 'December'",
+					"do": {
+						"music": { "url": "https://files.catbox.moe/vi78rm.wav", "volume": 0.8 }
+					}
+				},
+				{
+					"music": {
+						"url": "#MusicShopping",
+						"volume": 0.45
+					},
+					"if": "passage has 'Shopping Centre'",
+					"do": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/Shopping Mall.mp3",
+							"volume": 0.5,
+							"start": "0~3600"
+						}
+					},
+					"else": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/Shopping Mall.mp3",
+							"volume": 0.3,
+							"start": "0~3600"
+						}
+					}
+				}
+			]
+		},
+		{
+			"if": "passage has 'Hookah'",
+			"do": {
+				"music": {
+					"url": "#PotionShopMusic",
+					"volume": 0.8
+				}
+			}
+		},
+		{
+			"if": "location 'forest_shop'",
+			"do": {
+				"music": {
+					"url": "#PotionShopMusic",
+					"volume": 0.7
+				},
+				"if": "lastPassage has 'Forest'",
+				"do": {
+					"sfx": {
+						"url": "./breeze/packs/default/sfx/doorCreak.wav",
+						"volume": 1.0
+					}
+				}
+			}
+		},
+		{
+			"if": "(location 'farm' or location has 'alex') and dayState neq 'night'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/farm.mp3",
+					"volume": 0.8
+				},
+				"if": "npcData.alex.pronoun 'f'",
+				"do": {
+					"music": {
+						"url": "./breeze/packs/Star/audio/farm.mp3",
+						"volume": 0.75
+					}
+				}
+			}
+		},
+		{
+			"if": "location 'arcade' and !outside",
+			"do": [
+				{
+					"if": "passage has 'Tenyclus'",
+					"do": {
+						"music": {
+							"url": "#Tenyclus",
+							"volume": 1.0,
+							"start": "0~3600"
+						},
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/maou_bgm_8bit20.mp3",
+							"volume": 0.1,
+							"start": "0~3600"
+						}
+					}
+				},
+				{
+					"if": "(dayState 'day' or dayState 'dusk')",
+					"do": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/maou_bgm_8bit20.mp3",
+							"volume": 0.3,
+							"start": "0~3600"
+						}
+					}
+					
+				}
+			]
+		},
+		{
+			"if": "location 'docks'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/port-la-foret-62414.mp3",
+					"volume": 0.6
+				}
+			}
+		},
+		{
+			"if": "location 'temple'",
+			"do": [
+				{
+					"if": "dayState 'night'",
+					"do": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/temple2.mp3",
+							"volume": 0.8
+						}
+					}
+				},
+				{
+					"music": {
+						"url": "./breeze/packs/Star/audio/temple.mp3",
+						"volume": 1.0
+					}
+				}
+			]
+		},
+		{
+			"if": "location 'flats' or location 'canal'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/flats.mp3",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "location 'tentworld'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/maou_bgm_healing17.mp3",
+					"volume": 0.6
+				}
+			}
+		},
+		{
+			"if": "location 'pub'",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/bar-background-001-291671.mp3",
+					"volume": 0.6
+				},
+				"if": "dayState 'dusk'",
+				"do": {
+					"music": {
+						"url": "./breeze/packs/Star/audio/boston-piano-bar-231669.mp3",
+						"volume": 0.7
+					}
+				}
+			}
+		},
+		{
+			"if": "location 'cafe'",
+			"do": {
+				"ambience": {
+					"url": "./breeze/packs/Star/audio/cafe-ambience-9263.mp3",
+					"volume": 0.6
+				},
+				"if": "weather neq 'none'",
+				"do": {
+					"music": {
+						"url": "./breeze/packs/Star/audio/Coffee_Beat.mp3",
+						"volume": 0.65
+					}
+				},
+				"else": {
+					"if": "cafeUpgraded true",
+					"do": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/Coffee_Beat.mp3",
+							"volume": 0.6
+						}
+					},
+					"else": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/Coffee_Beat.mp3",
+							"volume": 0.6
+						}
+					}
+				}
+			}
+		},
+		{
+			"if": "location 'sea' && !underwater",
+			"do": {
+				"ambience": {
+					"url": "./breeze/packs/Star/audio/ocean-75393.mp3",
+					"volume": 1.0
+				}
+			}
+		},
+		{
+			"if": "location 'home'",
+			"do": [
+				{
+					"if": "orphanageHope <= -20 && orphanageReb <= -20",
+					"do": { "music": { "url": "#OrphanageLowHopeLowReb", "volume": 0.7 } }
+				},
+				{
+					"if": "orphanageHope > -20 && orphanageHope < 20 && orphanageReb <= -20",
+					"do": { "music": { "url": "#OrphanageMidHopeLowReb", "volume": 0.7 } }
+				},
+				{
+					"if": "orphanageHope >= 20 && orphanageReb <= -20",
+					"do": { "music": { "url": "#OrphanageHighHopeLowReb", "volume": 0.7 } }
+				},
+				{
+					"if": "orphanageHope <= -20 && orphanageReb > -20 && orphanageReb < 20",
+					"do": { "music": { "url": "#OrphanageLowHopeMidReb", "volume": 0.7 } }
+				},
+				{
+					"if": "orphanageHope > -20 && orphanageHope < 20 && orphanageReb > -20 && orphanageReb < 20",
+					"do": { "music": { "url": "#OrphanageMidHopeMidReb", "volume": 0.7 } }
+				},
+				{
+					"if": "orphanageHope >= 20 && orphanageReb > -20 && orphanageReb < 20",
+					"do": { "music": { "url": "#OrphanageHighHopeMidReb", "volume": 0.7 } }
+				},
+				{
+					"if": "orphanageHope <= -20 && orphanageReb >= 20",
+					"do": { "music": { "url": "#OrphanageLowHopeHighReb", "volume": 0.7 } }
+				},
+				{
+					"if": "orphanageHope > -20 && orphanageHope < 20 && orphanageReb >= 20",
+					"do": { "music": { "url": "#OrphanageMidHopeHighReb", "volume": 0.7 } }
+				},
+				{
+					"if": "orphanageHope >= 20 && orphanageReb >= 20",
+					"do": { "music": { "url": "#OrphanageHighHopeHighReb", "volume": 0.7 } }
+				}
+			]
+		},
+		{
+			"if": "location 'park' and (dayState 'dawn' or dayState 'day') and outside",
+			"do": {
+				"ambience": {
+					"url": "./breeze/packs/Star/audio/park-ambience-70029.mp3",
+					"volume": 0.6
+				}
+			}
+		},
+		{
+			"if": "(location 'park' or location 'beach') and (dayState 'dawn' or dayState 'day') and outside",
+			"do": {
+				"music": {
+					"url": "./breeze/packs/Star/audio/maou_bgm_acoustic42.mp3",
+					"volume": 0.6
+				}
+			}
+		},
+		{
+			"if": "(location 'beach' or location 'chalets') and outside and !underwater",
+			"do": {
+				"if": "weather eq 'none' and season neq 'winter' and dayState neq 'night'",
+				"do": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/beach-sound-with-seagulls-218923.mp3",
+						"volume": 0.3,
+						"fadeout": 3000
+					}
+				},
+				"else": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/ocean-waves-112906.mp3",
+						"volume": 0.4,
+						"fadeout": 3000
+					}
+				}
+			}
+		},
+		{
+			"if": "location has 'school' or location 'pool'",
+			"do": [
+				{
+					"if": "time.weekDayName 'Friday' and clock < 15:00",
+					"do": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/After_school.mp3",
+							"volume": 0.6,
+							"fadeout": 3000
+						}
+					}
+				},
+				{
+					"if": "clock < 13:00",
+					"do": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/School.mp3",
+							"volume": 0.35,
+							"fadeout": 4000
+						}
+					}
+				},
+				{
+					"do": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/School.mp3",
+							"volume": 0.35,
+							"fadeout": 4000
+						}
+					}
+				}
+			]
+		},
+		{
+			"if": "location 'pool'",
+			"do": {
+				"if": "passage has 'Changing Room'",
+				"do": {},
+				"else": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/swimmingpool.mp3",
+						"volume": 0.6
+					},
+					"if": "clock >= 14:00 and clock <= 15:00",
+					"do": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/pool.mp3",
+							"volume": 0.6,
+							"start": "0~1800"
+						}
+					}
+				}
+			}
+		},
+		{
+			"if": "location 'school' and !isWeekEnd and text nas 'The school hallways are empty.'",
+			"do": [
+				{
+					"if": "(passage has 'Library' or passage has 'Sydney Chat') and clock <= 17:00",
+					"do": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/library.mp3",
+							"volume": 0.5,
+							"start": "0~3600"
+						}
+					}
+				},
+				{
+					"if": "passage has 'Canteen' and time.hour 12",
+					"do": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/airport_cafe.mp3",
+							"volume": 0.55,
+							"start": "0~1800",
+							"fadein": 2000,
+							"fadeout": 500
+						}
+					}
+				},
+				{
+					"if": "passage has 'Hallway' and ((clock >= 8:00 and clock <= 9:00) or clock == 9:59 or clock == 10:59 or (clock >= 11:59 and clock <= 13:00) or clock == 13:59 or (clock >= 14:59 and clock <= 16:00))",
+					"do": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/schoolsoundwalk.mp3",
+							"volume": 0.4,
+							"start": "0~3600",
+							"fadein": 2000,
+							"fadeout": 500
+						}
+					}
+				}
+			]
+		},
+		{
+			"if": "location 'town' and (mapLocation 'cliff' or mapLocation 'starfish') and outside",
+			"do": {
+				"if": "weather 'none' and season neq 'winter' and dayState neq 'night'",
+				"do": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/beach-sound-with-seagulls-218923.mp3",
+						"volume": 0.15
+					}
+				},
+				"else": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/ocean-waves-112906.mp3",
+						"volume": 0.15
+					}
+				}
+			}
+		},
+		{
+			"if": "((location 'town' or location 'alley') and outside) or location 'market'",
+			"do": {
+				"if": "dayState 'dawn' or dayState 'day'",
+				"do": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/traffic.mp3",
+						"volume": 0.2
+					}
+				},
+				"else": {
+					"ambience": {
+						"url": "./breeze/packs/Star/audio/night.mp3",
+						"volume": 0.8
+					}
+				}
+			}
+		},
+
+		{
+			"if": "location 'cabin'",
+			"do": {
+				"if": "text has 'bath' and text nas 'I need a bath'",
+				"do": {
+					"ambience": {
+						"url": "#Bath",
+						"volume": 1
+					}
+				},
+				"else": {
+					"if": "outside or text has 'leads you outside' or text has `let's go home`",
+					"do": {
+						"if": "weather eq 'none'",
+						"do": {
+							"ambience": {
+								"url": "#ForestDay",
+								"volume": 0.8
+							}
+						}
+					},
+					"else": {
+						"ambience": {
+							"url": "#CabinInterior",
+							"volume": 2
+						}
+					}
+				}
+			}
+		},
+		{
+			"if": "text has 'river' and location 'forest'",
+			"do": {
+				"ambience": {
+					"url": "#RushingWater",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "location 'lake'",
+			"do": {
+				"ambience": {
+					"url": "./breeze/packs/Star/audio/Lake.mp3",
+					"volume": 1
+				}
+			}
+		},
+		{
+			"if": "location 'drain'",
+			"do": {
+				"ambience": [
+					{ "url": "./breeze/packs/Star/audio/emviroment.mp3", "volume": 0.8 },
+					{ "url": "./breeze/packs/Star/audio/drippingwater.mp3", "volume": 0.4 }
+				]
+			}
+		},
+		{
+			"if": "passage has 'Waterfall'",
+			"do": {
+				"ambience": {
+					"url": "./breeze/packs/Star/audio/Waterfall.mp38",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "location 'forest'",
+			"do": [
+				{
+					"if": "season 'winter'",
+					"do": [
+						{
+							"if": "forestDepth lte 10",
+							"do": {
+								"music": {
+									"url": "./breeze/packs/Star/audio/winterforest.mp38",
+									"volume": 0.6
+								}
+							}
+						},
+						{
+							"do": {
+								"music": {
+									"url": "./breeze/packs/Star/audio/winterforest.mp38",
+									"volume": 0.7
+								}
+							}
+						}
+					]
+				},
+				{
+					"if": "forestDepth gte 15",
+					"do": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/forest.mp38",
+							"volume": 1.5
+						}
+					}
+				},
+				{
+					"if": "forestDepth gte 11",
+					"do": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/forest.mp38",
+							"volume": 0.6
+						}
+					},
+					"else": {
+						"music": {
+							"url": "./breeze/packs/Star/audio/forest.mp38",
+							"volume": 0.7
+						}
+					}
+				}
+			]
+		},
+		{
+			"if": "passage 'Underground Lake'",
+			"do": {
+				"ambience": {
+					"url": "#Underwater",
+					"volume": 1.2
+				}
+			}
+		},
+		{
+			"if": "location 'wolf_cave' and !outside",
+			"do": {
+				"if": "passage has 'Descent'",
+				"do": {
+					"sfx": {
+						"url": "#SplashIntoWater",
+						"volume": 0.3
+					},
+					"ambience": [
+						{
+							"url": "#RushingWater",
+							"volume": 0.1
+						},
+						{
+							"url": "#Underwater",
+							"volume": 0.8
+						}
+					]
+				},
+				"else": {
+					"if": "passage has 'Hole'",
+					"do": {
+						"ambience": {
+							"url": "#RushingWater",
+							"volume": 0.2
+						}
+					},
+					"else": {
+						"ambience": {
+							"url": "#CaveWind",
+							"volume": 0.15
+						}
+					}
+				}
+			}
+		},
+		{
+			"if": "location 'forest' or location 'lake' or (location 'wolf_cave' and outside)",
+			"do": [
+				{
+					"if": "isBloodMoon",
+					"do": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/creepy.mp38",
+							"volume": 0.7
+						}
+					},
+					"else": {
+						"if": "dayState 'night'",
+						"do": {
+							"if": "forestDepth lte 10",
+							"do": {
+								"ambience": {
+									"url": "./breeze/packs/Star/audio/scary.mp38",
+									"volume": 0.5
+								}
+							},
+							"else": {
+								"ambience": {
+									"url": "./breeze/packs/Star/audio/scary.mp38",
+									"volume": 0.5
+								}
+							}
+						},
+						"else": {
+							"if": "weather eq 'none'",
+							"do": {
+								"ambience": {
+									"url": "#ForestDay",
+									"volume": 0.9,
+									"start": "0~3600"
+								}
+							}
+						}
+					}
+				},
+				{
+					"if": "weather 'rain'",
+					"do": {
+						"ambience": {
+							"url": "./breeze/packs/Star/audio/rainforest.mp38",
+							"volume": 0.4,
+							"start": "0~3600"
+						}
+					}
+				}
+			]
+		},
+		{
+			"if": "lastAction has 'Water'",
+			"do": {
+				"sfx": {
+					"url": [
+						"./breeze/packs/default/sfx/watering1.wav",
+						"./breeze/packs/default/sfx/watering2.wav",
+						"./breeze/packs/default/sfx/watering3.wav"
+					]
+				}
+			}
+		},
+		{
+			"if": "passage has 'Bed'",
+			"do": [
+				{
+					"if": "lastAction has 'in bed'",
+					"do": {
+						"sfx": {
+							"url": "./breeze/packs/default/sfx/bed_enter.wav",
+							"volume": 1.0
+						}
+					}
+				},
+				{
+					"if": "lastAction has 'out of bed'",
+					"do": {
+						"sfx": {
+							"url": "./breeze/packs/default/sfx/bed_exit.wav",
+							"volume": 1.0
+						}
+					}
+				}
+			]
+		},
+		{
+			"if": "lastAction has 'Leave' and location 'town' and lastLocation 'home'",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/doorClose.wav",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "lastAction has 'Go home' and location 'home' and lastLocation 'town'",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/doorOpen.wav",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "lastAction has 'Leave' and location 'town' and lastLocation 'temple'",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/church_door_close.wav",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "location 'temple' and lastLocation 'town'",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/church_door.wav",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "lastAction has 'Leave' and lastPassage has 'Ocean Breeze'",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/bell_close.wav",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "lastAction has 'Cafe' and lastPassage has 'Cliff Street'",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/bell_open.wav",
+					"volume": 0.4
+				}
+			}
+		},
+		{
+			"if": "(lastAction has 'Shopping centre' and lastPassage has 'High Street') or (lastAction has 'High Street' and lastPassage has 'Shopping Centre')",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/automatic_door.wav",
+					"volume": 0.7
+				}
+			}
+		},
+		{
+			"if": "(lastPassage has 'Hospital front' and lastAction has 'Go inside hospital') or (lastPassage has 'Hospital Foyer' and lastAction has 'Go outside')",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/automatic_door.wav",
+					"volume": 0.7
+				}
+			}
+		},
+		{
+			"if": "(lastAction has 'Swim' or lastAction has 'swim') && !underwater",
+			"do": {
+				"sfx": {
+					"url": [
+						"./breeze/packs/default/sfx/water_lap1.wav",
+						"./breeze/packs/default/sfx/water_lap2.wav",
+						"./breeze/packs/default/sfx/water_lap3.wav"
+					],
+					"volume": 1.0
+				}
+			}
+		},
+		{
+			"if": "text has 'starts snipping'",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/scissors.wav",
+					"volume": 0.8,
+					"repeat": "500~3000"
+				}
+			}
+		},
+		{
+			"if": "lastAction has 'Knock'",
+			"do": {
+				"sfx": {
+					"url": "./breeze/packs/default/sfx/knock.wav",
+					"volume": 0.4
+				}
+			}
+		}
+	]
+}
