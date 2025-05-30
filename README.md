@@ -17,6 +17,7 @@ https://gitgud.io/velvetvillainess/breeze-of-lewdity
 
 v0.2以預設包為基礎進行音樂與環境音替換
 
+
 -未來-
 
 程式碼整理
@@ -27,6 +28,7 @@ v0.2以預設包為基礎進行音樂與環境音替換
 
 正在為地點添加音樂
 
+-----------------------------------
 
 Music package made with Breeze of Lewdity module
 All audio with local files.
@@ -43,6 +45,7 @@ Put the Star folder in it into the game folder\breeze\packs
 Start the game and open breeze of leedity
 Press Import From File and select Star.json in the Star folder
 
+
 -Update-
 
 v0.2 replaces music and ambient sound based on the default package
@@ -52,5 +55,7 @@ v0.2 replaces music and ambient sound based on the default package
 Code organization
 
 Sound files organized
+
 Ambient sound has been added for most scenes
+
 Adding music to locations
