@@ -4,6 +4,7 @@
 https://gitgud.io/velvetvillainess/breeze-of-lewdity
 
 -安裝-
+
 1.
 下載Star.rar
 把裡面的Star文件夾放進遊戲資料夾裡\breeze\packs的裡面
