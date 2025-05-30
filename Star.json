@@ -55,7 +55,7 @@
 			"if": "location 'banner'",
 			"do": {
 				"music": {
-					"url": "./breeze/packs/Star/audio/yume.mp3",
+					"url": "https://kappa.vgmsite.com/soundtracks/slow-damage-bgm-collection-2021/amcoihsxxy/53.%20Zanya.mp3",
 					"volume": 0.6
 				}
 			}
@@ -992,7 +992,7 @@
 			"if": "passage has 'Waterfall'",
 			"do": {
 				"ambience": {
-					"url": "./breeze/packs/Star/audio/Waterfall.mp38",
+					"url": "./breeze/packs/Star/audio/Waterfall.mp3",
 					"volume": 0.4
 				}
 			}
@@ -1007,7 +1007,7 @@
 							"if": "forestDepth lte 10",
 							"do": {
 								"music": {
-									"url": "./breeze/packs/Star/audio/winterforest.mp38",
+									"url": "./breeze/packs/Star/audio/winterforest.mp3",
 									"volume": 0.6
 								}
 							}
@@ -1015,7 +1015,7 @@
 						{
 							"do": {
 								"music": {
-									"url": "./breeze/packs/Star/audio/winterforest.mp38",
+									"url": "./breeze/packs/Star/audio/winterforest.mp3",
 									"volume": 0.7
 								}
 							}
@@ -1026,7 +1026,7 @@
 					"if": "forestDepth gte 15",
 					"do": {
 						"music": {
-							"url": "./breeze/packs/Star/audio/forest.mp38",
+							"url": "./breeze/packs/Star/audio/forest.mp3",
 							"volume": 1.5
 						}
 					}
@@ -1035,13 +1035,13 @@
 					"if": "forestDepth gte 11",
 					"do": {
 						"music": {
-							"url": "./breeze/packs/Star/audio/forest.mp38",
+							"url": "./breeze/packs/Star/audio/forest.mp3",
 							"volume": 0.6
 						}
 					},
 					"else": {
 						"music": {
-							"url": "./breeze/packs/Star/audio/forest.mp38",
+							"url": "./breeze/packs/Star/audio/forest.mp3",
 							"volume": 0.7
 						}
 					}
@@ -1101,7 +1101,7 @@
 					"if": "isBloodMoon",
 					"do": {
 						"ambience": {
-							"url": "./breeze/packs/Star/audio/creepy.mp38",
+							"url": "./breeze/packs/Star/audio/creepy.mp3",
 							"volume": 0.7
 						}
 					},
@@ -1111,13 +1111,13 @@
 							"if": "forestDepth lte 10",
 							"do": {
 								"ambience": {
-									"url": "./breeze/packs/Star/audio/scary.mp38",
+									"url": "./breeze/packs/Star/audio/scary.mp3",
 									"volume": 0.5
 								}
 							},
 							"else": {
 								"ambience": {
-									"url": "./breeze/packs/Star/audio/scary.mp38",
+									"url": "./breeze/packs/Star/audio/scary.mp3",
 									"volume": 0.5
 								}
 							}
@@ -1138,7 +1138,7 @@
 					"if": "weather 'rain'",
 					"do": {
 						"ambience": {
-							"url": "./breeze/packs/Star/audio/rainforest.mp38",
+							"url": "./breeze/packs/Star/audio/rainforest.mp3",
 							"volume": 0.4,
 							"start": "0~3600"
 						}
